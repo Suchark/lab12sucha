@@ -10,22 +10,22 @@ int drawCard(void){
 	return rand()%13 + 1;
 }
 
-int calScore(int J,int Q,int K){
-	if(J > 10)
-	J = 10;
-	if(Q > 10)
-	Q = 10;
-	if(K > 10)
-	K = 10;
-	if((J+Q+K)%10 == 0)
+int calScore(int x,int y,int z){
+	if(x > 10)
+	x = 10;
+	if(y > 10)
+	y = 10;
+	if(z > 10)
+	z = 10;
+	if((x+y+z)%10 == 0)
 	return 0;
 
-  else if ((J+Q+K) > 20)
-	return J+Q+K - 20;
-  else if ((J+Q+K) > 10)
-	return J+Q+K - 10;
+  else if ((x+y+z) > 20)
+	return x+y+z - 20;
+  else if ((x+y+z) > 10)
+	return x+y+z - 10;
   else
-	return J + Q + K;
+	return x + y + z;
 }
 
 int findYugiAction(int s){	
